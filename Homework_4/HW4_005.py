@@ -13,6 +13,7 @@ def pars_to_dict(s):  # функция парсинга строки в слов
     return dict(s_lst)
 
 
+
 with open('poly1.txt', 'r') as data:
     x_1 = data.readline()
 with open('poly2.txt', 'r') as data:

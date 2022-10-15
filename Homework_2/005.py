@@ -5,7 +5,7 @@
 
 import random
 n=10
-spisok = [item for item in range(0, n)]
+spisok = [random.randint(0,n) for item in range(0, n)]
 
 print(spisok)
 
@@ -16,3 +16,22 @@ for i in range(len(spisok)):
     spisok[j]=temp
     
 print(spisok)
+
+
+
+list = [1, 2, 3, 4, 5, 6]
+for i in range(len(list)):
+    a =  random.randint(0,len(list) -1)
+    if list[i] != list[a]:
+        list[i],list[a] = list[a],list[i] #перестановка
+        print(list[i], list[a])
+print(list)
+
+
+my_list = [1, 2, 3, 4, 5, 6]
+for i, elem in enumerate(my_list):
+    a =  random.randint(0,len(my_list) -1)
+    if elem != my_list[a]:
+        elem,my_list[a] = my_list[a],elem
+        print(elem, my_list[a])
+print(my_list)

@@ -4,6 +4,5 @@
 # - 0,56 -> 11
 
 num = input('Введите вещественное число: ')
-while not num.lstrip('-').replace('.', '', 1).isdigit():
-    num = input('Введите вещественное число: ')
+while not num.lstrip('-').replace('.', '',1).isdigit(): num = input('Введите вещественное число: ')  
 print(sum(list(map(int, num.lstrip('-').replace('.', '', 1)))))

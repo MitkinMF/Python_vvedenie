@@ -5,11 +5,11 @@
 # - 7 -> да
 # - 1 -> нет
 
-day = 0
+day = int(input('Введите номер дня недели: '))
 while not (1 <= day <= 7):
     day = int(input('Введите номер дня недели: '))
 
-if day == 6 or day == 7: 
+if 6 < day < 8:
     print('да')
-else: 
+else:
     print('нет')

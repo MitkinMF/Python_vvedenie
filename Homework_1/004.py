@@ -1,14 +1,9 @@
 # Напишите программу, которая по заданному номеру четверти, показывает диапазон
 # возможных координат точек в этой четверти (x и y).
 
-flag = True
-while flag:
+quater = '0'
+while quater not in ('1', '2', '3', '4'):
     quater = input('Введите номер координатной четверти: ')
-    if len(quater) == 1:
-        if not (1 <= int(quater) <= 4):
-            print('Числа должны быть от 1 до 4')
-        else:
-            flag = not flag
 if quater == 1:
     print('х>0, y>0')
 elif quater == 2:
