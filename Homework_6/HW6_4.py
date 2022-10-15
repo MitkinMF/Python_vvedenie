@@ -1,23 +1,33 @@
-# Функция принимает строки "Имя Фамилия" возвращает словарь, где ключ первая буква фамилии, затем первая буква имени и массив имён соответсвующий первым буквам
-input_names = ["Иван Сергеев", "Мария Серова", "Петр Алексеев", "Илья Иванов",
-               "Марина Савельева", "Петр Анисимов", "Алина Ветрякова", "Бибочка Аркадьева"]
+# Р РµР°Р»РёР·СѓР№С‚Рµ RLE Р°Р»РіРѕСЂРёС‚Рј: СЂРµР°Р»РёР·СѓР№С‚Рµ РјРѕРґСѓР»СЊ СЃР¶Р°С‚РёСЏ Рё РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ РґР°РЅРЅС‹С….
+# РЎР¶Р°С‚РёРµ
 
+with open('Homework_6/data.txt', 'r') as data:
+    my_data=data.readline()
+count = 1
+my_new_data = []
+i=0
+for i in range(1, len(my_data)):
+    if my_data[i] == my_data[i-1]:
+        count += 1
+    else:
+        my_new_data.append(count)
+        my_new_data.append(my_data[i-1])
+        count = 1
+my_new_data.append(count)
+my_new_data.append(my_data[i])
+with open('zipdata.txt', 'w') as data:
+    data.write(''.join(map(str, my_new_data))) #map
 
-def handle_lastname(fullname: str, note: dict):
-    splitted = fullname.split()
-    last_name = splitted[1]
-
-    if last_name[0] not in note:
-        note[last_name[0]] = dict()
-    handle_firstname(fullname, note[last_name[0]])
-
-
-def handle_firstname(fullname: str, note: dict):
-    if fullname[0] not in note:
-        note[fullname[0]] = list()
-    note[fullname[0]].append(fullname)
-
-
-book = dict()
-for name in input_names:
-    handle_lastname(name, book)
+# Р Р°СЃРїР°РєРѕРІРєР°
+with open('zipdata.txt', 'r') as data:
+    my_data1=data.readline()
+print(my_data1)
+temp_str=''
+my_new_data1=''
+for item in my_data1:
+    if item.isdigit():
+        temp_str+=item      
+    else:
+        my_new_data1=my_new_data1+(int(temp_str)*item)
+        temp_str=''
+print(my_new_data1)

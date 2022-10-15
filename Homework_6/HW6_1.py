@@ -11,18 +11,18 @@ def fact (n):
         return n*fact(n-1)
 
 
-fact_lamb=lambda n: 1 if n==1 else n*fact(n-1) #добавлено
+fact_lamb=lambda n: 1 if n==1 else n*fact_lamb(n-1)  #добавлено
 
 
 num = input('Введите натуральное число больше 0: ')
 while not (num[0] !='0' and num.isdigit()):
     num = input('Введите натуральное число больше 0: ')
-    
-fact_list=list()
-fact_list_1=list()
+num=int(num)
 
-for n in range(1, int(num)+1):
-    fact_list.append(fact(n))
-    fact_list_1.append(fact_lamb(n))
-print (fact_list)
-print (fact_list_1)
+n_list=[f'n={i}' for i in range(1,num+1)]
+
+fact_list=[fact(n) for n in range(1, num+1)]
+
+fact_list_1=[fact_lamb(n) for n in range(1, num+1)]
+
+print(list(zip(n_list, fact_list, fact_list_1)))
