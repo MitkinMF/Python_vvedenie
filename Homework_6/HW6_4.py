@@ -15,11 +15,11 @@ for i in range(1, len(my_data)):
         count = 1
 my_new_data.append(count)
 my_new_data.append(my_data[i])
-with open('zipdata.txt', 'w') as data:
+with open('Homework_6/zipdata.txt', 'w') as data:
     data.write(''.join(map(str, my_new_data))) #map
 
 # Распаковка
-with open('zipdata.txt', 'r') as data:
+with open('Homework_6/zipdata.txt', 'r') as data:
     my_data1=data.readline()
 print(my_data1)
 temp_str=''
