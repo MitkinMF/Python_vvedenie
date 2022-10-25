@@ -21,7 +21,7 @@ def main_loop():
         elif s=='4':  
             view.menu_select_out_format()
             view.out_file(t_book,view.cmd_input())
-        elif s=='5':  
+        elif s=='0':  
             flag=0
             break
         s=input('Нажмите Enter чтобы продолжить')
