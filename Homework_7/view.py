@@ -17,7 +17,7 @@ def out_to_screen(my_list:list):
     print('_____________________________________________')
     for elem in my_list:
         print(f'{elem[0]}  |  {elem[1]}  |  {elem[2]}')   
-         
+        
          
 def out_to_bot(my_list:list):
     s= 'Фамилия  |   Имя   |  Телефон \n _____________________________________________ \n'
