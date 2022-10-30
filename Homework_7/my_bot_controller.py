@@ -5,7 +5,7 @@ t_book=[]
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes, MessageHandler, filters
 
-my_token ='5470085953:AAFQbhpBI1OVk-Fk_-F7zdr236ioCWh-qS0'
+
 
 
 async def hello(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
