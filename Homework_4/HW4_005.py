@@ -22,7 +22,7 @@ with open('poly2.txt', 'r') as data:
 poly_1 = pars_to_dict(x_1)
 poly_2 = pars_to_dict(x_2)
 poly_sum = {}
-
+print (poly_1)
 pow_1 = list(poly_1.keys())  # получение списка ключей
 pow_2 = list(poly_2.keys())
 
